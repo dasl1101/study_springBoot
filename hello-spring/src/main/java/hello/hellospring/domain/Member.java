@@ -1,6 +1,12 @@
 package hello.hellospring.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Member {
+
+    private Long id;
+    private String name;
 
     public Long getId() {
         return id;
@@ -17,8 +23,5 @@ public class Member {
     public void setName(String name) {
         this.name = name;
     }
-
-    private Long id;
-    private String name;
 
 }
