@@ -21,10 +21,7 @@ public class MemberService {
     회원가입
      */
     public Long join(Member member){
-        //같은 이름이 있는 중복 회원은 x
-        validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
+            return member.getId();
     }
     //메소드 뽑아내기 단축키: ctrl+alt+m
     private void validateDuplicateMember(Member member) {
@@ -37,8 +34,7 @@ public class MemberService {
     전체 회원 조회
      */
     public List<Member> findMembers(){
-        return memberRepository.findAll();
-
+            return memberRepository.findAll();
     }
 
     public Optional<Member> findOne(Long memberId){
